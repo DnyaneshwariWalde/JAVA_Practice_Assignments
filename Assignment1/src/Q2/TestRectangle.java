@@ -1,0 +1,28 @@
+package Q2;
+import java.util.Scanner;
+
+public class TestRectangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Rectangle[] rectangles = new Rectangle[5];
+        
+        for (int i = 0; i < rectangles.length; i++) {
+            System.out.println("Rectangle " + (i+1));
+            System.out.print("Enter length: ");
+            double length = sc.nextDouble();
+            System.out.print("Enter breadth: ");
+            double breadth = sc.nextDouble();
+            
+            rectangles[i] = new Rectangle(length, breadth);
+        }
+        System.out.println("-----------------------------------------");
+        for (int i = 0; i < rectangles.length; i++) {
+        	System.out.println("-------Final Output----------");
+            System.out.println("Rectangle " + (i+1));
+            rectangles[i].display();
+            System.out.println();
+        }
+        System.out.println("-----------------------------------------");
+
+    }
+}
